@@ -1,5 +1,8 @@
-node_modules
+# NPM dependencies
+node_modules/
 
-/.cache
-/build
+# Build
+build/
+
+# Dev Environment
 .env
