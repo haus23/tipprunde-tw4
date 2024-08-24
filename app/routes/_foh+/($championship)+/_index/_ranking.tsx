@@ -7,6 +7,10 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export const loader = () => {
+  throw redirect('/willkommen');
+};
+
 export default function RankingRoute() {
   return (
     <div className="p-4">
