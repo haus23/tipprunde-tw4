@@ -24,6 +24,15 @@
 
 [compare changes](https://github.com/haus23/tipprunde/compare/v0.0.1...v0.0.2)
 
+### 🚀 Enhancements
+
+- Add remix-flat-routes to generate routes.
+- Add basic routes with layouts.
+
+### 🩹 Fixes
+
+- Redirect ranking route - as long we have no data to show.
+
 ## v0.0.1
 
 
