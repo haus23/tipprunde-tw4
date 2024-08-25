@@ -25,7 +25,7 @@ export default function ManagerLayout() {
           </Form>
         </div>
       </header>
-      <main className="pl-52">
+      <main className="py-2 pl-52">
         <Outlet />
       </main>
     </div>

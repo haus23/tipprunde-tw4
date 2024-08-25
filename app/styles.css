@@ -1,1 +1,53 @@
 @import 'tailwindcss';
+
+/* Colors Tokens */
+:root {
+  --mauve-1: #fdfcfd;
+  --mauve-2: #faf9fb;
+  --mauve-3: #f2eff3;
+  --mauve-4: #eae7ec;
+  --mauve-5: #e3dfe6;
+  --mauve-6: #dbd8e0;
+  --mauve-7: #d0cdd7;
+  --mauve-8: #bcbac7;
+  --mauve-9: #8e8c99;
+  --mauve-10: #84828e;
+  --mauve-11: #65636d;
+  --mauve-12: #211f26;
+  --mauve-dark-1: #121113;
+  --mauve-dark-2: #1a191b;
+  --mauve-dark-3: #232225;
+  --mauve-dark-4: #2b292d;
+  --mauve-dark-5: #323035;
+  --mauve-dark-6: #3c393f;
+  --mauve-dark-7: #49474e;
+  --mauve-dark-8: #625f69;
+  --mauve-dark-9: #6f6d78;
+  --mauve-dark-10: #7c7a85;
+  --mauve-dark-11: #b5b2bc;
+  --mauve-dark-12: #eeeef0;
+}
+
+@layer base {
+
+
+  :root {
+    color-scheme: light dark;
+
+    --bg-app: light-dark(white, var(--mauve-dark-1));
+    --text-app: light-dark(var(--mauve-12), var(--mauve-dark-12));
+  }
+
+  [data-color-scheme=light] {
+    color-scheme: light;
+  }
+
+  [data-color-scheme=dark] {
+    color-scheme: dark;
+  }
+}
+
+@theme {
+  --background-color-app: var(--bg-app);
+  --color-app: var(--text-app);
+}

@@ -8,7 +8,7 @@ export const loader: LoaderFunction = async ({ request }) => {
 
 export default function DashboardRoute() {
   return (
-    <div className="p-4">
+    <div className="px-4">
       <h2 className="text-2xl">Dashboard</h2>
     </div>
   );
