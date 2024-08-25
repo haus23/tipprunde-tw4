@@ -1,17 +1,6 @@
-import type {
-  ActionFunctionArgs,
-  LoaderFunctionArgs,
-  MetaFunction,
-} from '@remix-run/node';
+import type { ActionFunctionArgs, LoaderFunctionArgs } from '@remix-run/node';
 import { Form, useActionData } from '@remix-run/react';
 import { login, requireAnonymous } from '#utils/.server/auth';
-
-export const meta: MetaFunction = () => {
-  return [
-    { title: 'Log In - runde.tips' },
-    { name: 'description', content: 'Anmeldeseite der Tipprunde' },
-  ];
-};
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   await requireAnonymous(request);

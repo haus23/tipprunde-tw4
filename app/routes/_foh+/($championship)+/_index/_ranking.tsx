@@ -1,11 +1,4 @@
-import { type MetaFunction, redirect } from '@remix-run/node';
-
-export const meta: MetaFunction = () => {
-  return [
-    { title: 'Tabelle - runde.tips' },
-    { name: 'description', content: 'Tabelle der Tipprunde' },
-  ];
-};
+import { redirect } from '@remix-run/node';
 
 export const loader = () => {
   throw redirect('/willkommen');
