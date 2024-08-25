@@ -1,8 +1,10 @@
 import { randomUUID } from 'node:crypto';
 import { redirect } from '@remix-run/node';
-import { commitSession, getSession } from './auth.session';
+import { redirectBack } from 'remix-utils/redirect-back';
 
-const validSessions: string[] = [];
+import { commitSession, destroySession, getSession } from './auth.session';
+
+const validSessions = new Set<string>();
 
 /**
  * Performs user login
@@ -26,7 +28,7 @@ export async function login(request: Request) {
 
   // Create Server Session
   const sessionId = randomUUID();
-  validSessions.push(sessionId);
+  validSessions.add(sessionId);
   session.set('sessionId', sessionId);
 
   throw redirect('/manager', {
@@ -36,16 +38,45 @@ export async function login(request: Request) {
   });
 }
 
+/**
+ * Logs user out. If no redirectFallback is set, it returns the destroy session cookie
+ * header. With redirectFallback it redirects to the referer or the fallback route
+ * and destroys the session cookie itself.
+ *
+ * @param request Request object
+ * @param redirectFallback Fallback URL if no referer in request
+ * @returns destroy session cookie header
+ */
+
+export async function logout(request: Request, redirectFallback?: string) {
+  const session = await getSession(request);
+  const sessionId = session.get('sessionId');
+
+  if (sessionId) {
+    validSessions.delete(sessionId);
+  }
+
+  const headers = new Headers({
+    'Set-Cookie': await destroySession(session),
+  });
+
+  if (redirectFallback) {
+    throw redirectBack(request, { fallback: redirectFallback, headers });
+  }
+
+  return headers;
+}
+
 export async function requireAnonymous(request: Request) {
   const session = await getSession(request);
-  if (validSessions.includes(session.get('sessionId') || '')) {
+  if (validSessions.has(session.get('sessionId') || '')) {
     throw redirect('/');
   }
 }
 
 export async function requireAdmin(request: Request) {
   const session = await getSession(request);
-  if (!validSessions.includes(session.get('sessionId') || '')) {
+  if (!validSessions.has(session.get('sessionId') || '')) {
     throw redirect('/login');
   }
 }
