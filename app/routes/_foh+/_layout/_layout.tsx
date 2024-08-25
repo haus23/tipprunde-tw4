@@ -1,11 +1,12 @@
 import { Link, NavLink, Outlet } from '@remix-run/react';
+import { Logo } from '#components/logo';
 
 export default function FohLayout() {
   return (
     <div className="relative isolate min-h-svh w-full">
-      <header className="flex items-center gap-x-4 border-b p-4">
+      <header className="flex items-center gap-x-4 border-b py-2 pr-4 pl-2">
         <Link to="/" className="text-2xl">
-          runde.tips
+          <Logo />
         </Link>
         <div>
           <NavLink to="/willkommen">Startseite</NavLink>
