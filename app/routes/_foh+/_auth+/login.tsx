@@ -4,7 +4,7 @@ import type {
   MetaFunction,
 } from '@remix-run/node';
 import { Form, useActionData } from '@remix-run/react';
-import { login, requireAnonymous } from '~/utils/.server/auth';
+import { login, requireAnonymous } from '#utils/.server/auth';
 
 export const meta: MetaFunction = () => {
   return [

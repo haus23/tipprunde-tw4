@@ -24,7 +24,7 @@
 
     // DX
     "paths": {
-      "~/*": ["./app/*"]
+      "#*": ["./app/*"]
     },
 
     // Typechecking

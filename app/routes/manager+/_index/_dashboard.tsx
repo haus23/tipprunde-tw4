@@ -1,5 +1,5 @@
 import type { LoaderFunction, MetaFunction } from '@remix-run/node';
-import { requireAdmin } from '~/utils/.server/auth';
+import { requireAdmin } from '#utils/.server/auth';
 
 export const meta: MetaFunction = () => {
   return [{ title: 'Dashboard - Tipprunde Manager' }];

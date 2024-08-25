@@ -1,6 +1,6 @@
 import type { LoaderFunction } from '@remix-run/node';
 import { Form, Link, NavLink, Outlet } from '@remix-run/react';
-import { requireAdmin } from '~/utils/.server/auth';
+import { requireAdmin } from '#utils/.server/auth';
 
 export const loader: LoaderFunction = async ({ request }) => {
   await requireAdmin(request);
