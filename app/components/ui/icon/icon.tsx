@@ -5,7 +5,7 @@ import iconsHref from './icons.svg';
 
 type IconName = 'laptop' | 'moon' | 'sun';
 
-const iconStyles = tv({ base: 'inline size-5' });
+const styles = tv({ base: 'inline size-5' });
 
 namespace Icon {
   export interface Props extends SVGProps<SVGSVGElement> {
@@ -27,7 +27,7 @@ function Icon({ name, className, children, ...props }: Icon.Props) {
       {...props}
       role="img"
       aria-label={`${name} icon`}
-      className={iconStyles({ className })}
+      className={styles({ className })}
     >
       <use href={`${iconsHref}#${name}`} />
     </svg>
