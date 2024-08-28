@@ -1,5 +1,10 @@
+import { Button } from './ui/button/button';
 import { Icon } from './ui/icon/icon';
 
 export function ThemeMenu() {
-  return <Icon name="laptop" />;
+  return (
+    <Button>
+      <Icon name="laptop" />
+    </Button>
+  );
 }

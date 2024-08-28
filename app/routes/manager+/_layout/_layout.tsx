@@ -1,6 +1,7 @@
 import type { LoaderFunction } from '@remix-run/node';
 import { Form, Link, NavLink, Outlet } from '@remix-run/react';
 import { Logo } from '#components/logo';
+import { Button } from '#components/ui/button/button';
 import { requireAdmin } from '#utils/.server/auth';
 
 export const loader: LoaderFunction = async ({ request }) => {
@@ -21,7 +22,7 @@ export default function ManagerLayout() {
         <div className="grow" />
         <div>
           <Form action="/logout" method="post">
-            <button type="submit">Log Out</button>
+            <Button type="submit">Log Out</Button>
           </Form>
         </div>
       </header>
