@@ -38,6 +38,11 @@
     --text-app: light-dark(var(--mauve-12), var(--mauve-dark-12));
   }
 
+  /** TODO: wait for documented tailwindcss@4 way */
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+      border-color: light-dark(var(--mauve-6), var(--mauve-dark-6));
+  }
+
   [data-color-scheme=light] {
     color-scheme: light;
   }
@@ -45,6 +50,8 @@
   [data-color-scheme=dark] {
     color-scheme: dark;
   }
+
+ 
 }
 
 @theme {
