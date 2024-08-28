@@ -9,60 +9,60 @@ importers:
   .:
     dependencies:
       '@remix-run/node':
-        specifier: ^2.11.2
+        specifier: ~2.11.2
         version: 2.11.2(typescript@5.5.4)
       '@remix-run/react':
-        specifier: ^2.11.2
+        specifier: ~2.11.2
         version: 2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
       '@remix-run/serve':
-        specifier: ^2.11.2
+        specifier: ~2.11.2
         version: 2.11.2(typescript@5.5.4)
       isbot:
-        specifier: ^4.1.0
-        version: 4.4.0
+        specifier: ~5.1.17
+        version: 5.1.17
       react:
-        specifier: ^18.2.0
+        specifier: ~18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18.2.0
+        specifier: ~18.3.1
         version: 18.3.1(react@18.3.1)
       remix-utils:
-        specifier: ^7.6.0
+        specifier: ~7.6.0
         version: 7.6.0(@remix-run/node@2.11.2(typescript@5.5.4))(@remix-run/react@2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(@remix-run/router@1.19.1)(react@18.3.1)
       valibot:
-        specifier: ^0.39.0
+        specifier: 0.39.0
         version: 0.39.0(typescript@5.5.4)
     devDependencies:
       '@biomejs/biome':
         specifier: 1.8.3
         version: 1.8.3
       '@remix-run/dev':
-        specifier: ^2.11.2
+        specifier: ~2.11.2
         version: 2.11.2(@remix-run/react@2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(@remix-run/serve@2.11.2(typescript@5.5.4))(@types/node@22.5.0)(lightningcss@1.26.0)(typescript@5.5.4)(vite@5.4.2(@types/node@22.5.0)(lightningcss@1.26.0))
       '@tailwindcss/vite':
         specifier: 4.0.0-alpha.20
         version: 4.0.0-alpha.20(jiti@1.21.6)(postcss@8.4.41)(vite@5.4.2(@types/node@22.5.0)(lightningcss@1.26.0))(yaml@2.5.0)
       '@types/react':
-        specifier: ^18.2.20
+        specifier: ~18.3.4
         version: 18.3.4
       '@types/react-dom':
-        specifier: ^18.2.7
+        specifier: ~18.3.0
         version: 18.3.0
       remix-flat-routes:
-        specifier: ^0.6.5
+        specifier: 0.6.5
         version: 0.6.5(@remix-run/dev@2.11.2(@remix-run/react@2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(@remix-run/serve@2.11.2(typescript@5.5.4))(@types/node@22.5.0)(lightningcss@1.26.0)(typescript@5.5.4)(vite@5.4.2(@types/node@22.5.0)(lightningcss@1.26.0)))
       tailwindcss:
         specifier: 4.0.0-alpha.20
         version: 4.0.0-alpha.20
       typescript:
-        specifier: ^5.1.6
+        specifier: ~5.5.4
         version: 5.5.4
       vite:
-        specifier: ^5.1.0
+        specifier: ^5.4.2
         version: 5.4.2(@types/node@22.5.0)(lightningcss@1.26.0)
       vite-tsconfig-paths:
-        specifier: ^4.2.1
-        version: 4.3.2(typescript@5.5.4)(vite@5.4.2(@types/node@22.5.0)(lightningcss@1.26.0))
+        specifier: ^5.0.1
+        version: 5.0.1(typescript@5.5.4)(vite@5.4.2(@types/node@22.5.0)(lightningcss@1.26.0))
 
 packages:
 
@@ -1593,8 +1593,8 @@ packages:
   isarray@1.0.0:
     resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==}
 
-  isbot@4.4.0:
-    resolution: {integrity: sha512-8ZvOWUA68kyJO4hHJdWjyreq7TYNWTS9y15IzeqVdKxR9pPr3P/3r9AHcoIv9M0Rllkao5qWz2v1lmcyKIVCzQ==}
+  isbot@5.1.17:
+    resolution: {integrity: sha512-/wch8pRKZE+aoVhRX/hYPY1C7dMCeeMyhkQLNLNlYAbGQn9bkvMB8fOUXNnk5I0m4vDYbBJ9ciVtkr9zfBJ7qA==}
     engines: {node: '>=18'}
 
   isexe@2.0.0:
@@ -2710,8 +2710,8 @@ packages:
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
-  vite-tsconfig-paths@4.3.2:
-    resolution: {integrity: sha512-0Vd/a6po6Q+86rPlntHye7F31zA2URZMbH8M3saAZ/xR9QoGN/L21bxEGfXdWmFdNkqPpRdxFT7nmNe12e9/uA==}
+  vite-tsconfig-paths@5.0.1:
+    resolution: {integrity: sha512-yqwv+LstU7NwPeNqajZzLEBVpUFU6Dugtb2P84FXuvaoYA+/70l9MHE+GYfYAycVyPSDYZ7mjOFuYBRqlEpTig==}
     peerDependencies:
       vite: '*'
     peerDependenciesMeta:
@@ -4407,7 +4407,7 @@ snapshots:
 
   isarray@1.0.0: {}
 
-  isbot@4.4.0: {}
+  isbot@5.1.17: {}
 
   isexe@2.0.0: {}
 
@@ -5696,7 +5696,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@4.3.2(typescript@5.5.4)(vite@5.4.2(@types/node@22.5.0)(lightningcss@1.26.0)):
+  vite-tsconfig-paths@5.0.1(typescript@5.5.4)(vite@5.4.2(@types/node@22.5.0)(lightningcss@1.26.0)):
     dependencies:
       debug: 4.3.6
       globrex: 0.1.2
