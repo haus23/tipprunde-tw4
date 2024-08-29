@@ -1,4 +1,4 @@
-import type { LinksFunction } from '@remix-run/node';
+import type { LinksFunction, LoaderFunctionArgs } from '@remix-run/node';
 import {
   Links,
   Meta,
@@ -7,8 +7,20 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
+import { getPrefsSession } from '#utils/.server/prefs.session';
+
 import styles from './styles.css?url';
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }];
+
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const prefs = await getPrefsSession(request);
+
+  return {
+    requestInfo: {
+      theme: prefs.get('theme'),
+    },
+  };
+};
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

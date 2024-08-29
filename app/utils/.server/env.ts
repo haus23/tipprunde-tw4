@@ -6,6 +6,7 @@ const envSchema = v.object({
 
   // Secrets
   AUTH_SESSION_SECRET: v.string(),
+  PREFS_SESSION_SECRET: v.string(),
 
   // Static password
   MANAGER_PASSWD: v.string(),
