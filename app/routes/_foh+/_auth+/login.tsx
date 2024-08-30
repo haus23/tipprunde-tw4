@@ -1,5 +1,6 @@
 import type { ActionFunctionArgs, LoaderFunctionArgs } from '@remix-run/node';
 import { Form, useActionData } from '@remix-run/react';
+import { Button } from '#components/ui/button/button';
 import { login, requireAnonymous } from '#utils/.server/auth';
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
@@ -24,7 +25,7 @@ export default function LoginRoute() {
             <input type="password" name="passwd" id="passwd" />
           </div>
           {actionData?.errors && <div>{actionData.errors.passwd}</div>}
-          <button type="submit">Anmelden</button>
+          <Button type="submit">Anmelden</Button>
         </fieldset>
       </Form>
     </div>

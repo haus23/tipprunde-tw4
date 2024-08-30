@@ -1,5 +1,6 @@
 import { Link, NavLink, Outlet } from '@remix-run/react';
 import { Logo } from '#components/logo';
+import { ThemeMenu } from '#components/theme-menu';
 
 export default function FohLayout() {
   return (
@@ -12,7 +13,8 @@ export default function FohLayout() {
           <NavLink to="/willkommen">Startseite</NavLink>
         </div>
         <div className="grow" />
-        <div>
+        <div className="flex items-center gap-x-2">
+          <ThemeMenu />
           <NavLink to="/manager">Manager</NavLink>
         </div>
       </header>

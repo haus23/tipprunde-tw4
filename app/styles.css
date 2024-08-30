@@ -30,12 +30,15 @@
 
 @layer base {
 
-
   :root {
     color-scheme: light dark;
 
     --bg-app: light-dark(white, var(--mauve-dark-1));
     --text-app: light-dark(var(--mauve-12), var(--mauve-dark-12));
+    --border-default: light-dark(var(--mauve-6), var(--mauve-dark-6));
+
+    /* Unused theme tokens */
+    --bg-content: light-dark(var(--mauve-2), var(--mauve-dark-2))
   }
 
   /** TODO: wait for documented tailwindcss@4 way */
@@ -43,18 +46,19 @@
       border-color: light-dark(var(--mauve-6), var(--mauve-dark-6));
   }
 
-  [data-color-scheme=light] {
+  .light {
     color-scheme: light;
   }
 
-  [data-color-scheme=dark] {
+  .dark {
     color-scheme: dark;
   }
-
- 
 }
 
 @theme {
   --background-color-app: var(--bg-app);
+  --background-color-content: var(--bg-app);
   --color-app: var(--text-app);
+  --fill-content: var(--bg-app);
+  --stroke-border: var(--border-default);
 }
