@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from '@remix-run/react';
 
 import { getPrefsSession } from '#utils/.server/prefs.session';
@@ -23,8 +24,14 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 };
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const data = useLoaderData<typeof loader>();
+  const colorScheme =
+    data?.requestInfo.theme?.colorScheme === 'system'
+      ? undefined
+      : data?.requestInfo.theme?.colorScheme;
+
   return (
-    <html lang="de">
+    <html lang="de" {...(colorScheme && { className: colorScheme })}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
