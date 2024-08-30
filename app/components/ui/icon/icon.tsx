@@ -3,7 +3,7 @@ import type { SVGProps } from 'react';
 import { tv } from '#utils/tv';
 import iconsHref from './icons.svg';
 
-type IconName = 'laptop' | 'moon' | 'sun';
+type IconName = 'check' | 'laptop' | 'moon' | 'sun' | 'sun-moon';
 
 const styles = tv({ base: 'inline size-5' });
 
