@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v0.0.5
+
+[compare changes](https://github.com/haus23/tipprunde/compare/v0.0.4...v0.0.5)
+
+### 💅 Refactors
+
+- Make the switch to single fetch ([5e25dfa](https://github.com/haus23/tipprunde/commit/5e25dfa))
+
+### 🏡 Chore
+
+- Patch update dev deps. ([19af608](https://github.com/haus23/tipprunde/commit/19af608))
+- Upgrade pnpm. ([81aa7b2](https://github.com/haus23/tipprunde/commit/81aa7b2))
+- Upgrade typescript. ([1d55ae0](https://github.com/haus23/tipprunde/commit/1d55ae0))
+- Upgrade tailwind. ([3a107a3](https://github.com/haus23/tipprunde/commit/3a107a3))
+- Upgrade biome. Integrate editorconfig. Re-Formatting ([d1307e8](https://github.com/haus23/tipprunde/commit/d1307e8))
+- Upgrade valibot. ([7109662](https://github.com/haus23/tipprunde/commit/7109662))
+- Upgrade remix. ([4d47ccb](https://github.com/haus23/tipprunde/commit/4d47ccb))
+
+### ❤️ Contributors
+
+- Micha Buchholz <micha@haus23.net>
+
 ## v0.0.4
 
 [compare changes](https://github.com/haus23/tipprunde/compare/v0.0.3...v0.0.4)
