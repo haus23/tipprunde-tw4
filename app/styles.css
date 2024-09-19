@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* Colors Tokens */
 :root {
@@ -29,7 +29,6 @@
 }
 
 @layer base {
-
   :root {
     color-scheme: light dark;
 
@@ -38,12 +37,16 @@
     --border-default: light-dark(var(--mauve-6), var(--mauve-dark-6));
 
     /* Unused theme tokens */
-    --bg-content: light-dark(var(--mauve-2), var(--mauve-dark-2))
+    --bg-content: light-dark(var(--mauve-2), var(--mauve-dark-2));
   }
 
   /** TODO: wait for documented tailwindcss@4 way */
-  *, ::after, ::before, ::backdrop, ::file-selector-button {
-      border-color: light-dark(var(--mauve-6), var(--mauve-dark-6));
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: light-dark(var(--mauve-6), var(--mauve-dark-6));
   }
 
   .light {
